@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+#define _CRT_SECURE_NO_WARNINGS 
+
+int main(void) {
+    int count;
+char str [5];
+    printf("Введіть число");
+    scanf(str);
+
+    
+    int numbers[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}; 
+    
+    char *digits[20][11] = {
+    "нуль", "один", "два", "три", "чотири",
+    "п'ять", "шість", "сім", "вісім","дев'ять",
+    "десять"}; 
+    
+    char *big_digits[12][9] = {
+    "десять", "двадцять", "тридцять", "сорок", "п'ятдесят",
+    "шістдесят", "сімдесят", "вісімдесят","дев'яносто"}; 
+    
+    char str_grn[]=" грн ";
+    char str_kop[]=" коп. ";
+    
+    count = strlen (str);
+    char str_finish[12];
+    if(count==5)
+    {
+        strcpy(str_finish, big_digits[str[0]+1]);
+    }
+    printf(big_digits[str[0]+1]);
+return 0;
+}
